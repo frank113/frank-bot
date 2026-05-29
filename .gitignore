@@ -2,7 +2,7 @@
 .claude/settings.local.json
 .venv/
 README.local.md
-
+models/ollama/README.local.md 
 
 models/ollama/qwen3-coder/.claude
 
