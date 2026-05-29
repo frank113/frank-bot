@@ -3,3 +3,5 @@ FROM qwen3.5:9b
 PARAMETER num_ctx 8192
 PARAMETER num_predict 1024
 PARAMETER temperature 0.2
+num_gpu 999
+num_thread 16
