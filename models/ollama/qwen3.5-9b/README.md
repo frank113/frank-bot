@@ -35,4 +35,8 @@ dels/ollama/qwen3.5-9b/build.sh ; ./models/ollama/qwen3.5-9b/build.sh
 
 ollama create qwen35-ctx32k -f Modelfile.32k
 
-To run:
+To run with claude:
+
+```sh
+ollama launch claude --model <MODEL_NAME>
+```
