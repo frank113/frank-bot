@@ -1,3 +1,3 @@
 # Base Model
 
-Model reference: [Link](https://frank-kovacs.net).
+Model reference: [Dummy link](https://frank-kovacs.net).
