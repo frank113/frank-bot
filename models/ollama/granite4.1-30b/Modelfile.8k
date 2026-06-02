@@ -1,0 +1,5 @@
+FROM granite4.1:30b
+
+PARAMETER num_ctx 8192
+PARAMETER num_predict 4096
+PARAMETER temperature 0.2
