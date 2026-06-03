@@ -1,9 +1,0 @@
-from qwen3.5:27b-coding-nvfp4
-
-PARAMETER num_ctx 32768
-PARAMETER num_predict 2048
-PARAMETER temperature 0.1
-PARAMETER num_thread 8
-PARAMETER top_p 0.8
-PARAMETER repeat_penalty 1.05
-PARAMETER num_gpu 999
