@@ -43,7 +43,44 @@ In this repository we create `modelfile` specifications that define custom infer
 | `num_gpu` | GPU layer offload | Number of layers to offload to GPU; 999 typically means all layers | 0 (CPU-only) |
 | `num_thread` | CPU threads | Number of CPU threads used during inference (mainly for CPU path) | matches CPU cores |
 
-## Other
+## Installed Models
+
+Models are grouped by family. Size is on-disk. Quantization format affects quality/speed trade-offs — see notes per model.
+
+### Qwen (Alibaba)
+
+| Model | Size | Format | Notes |
+|-------|------|--------|-------|
+| `qwen3.5:35b-mlx` | 21 GB | MLX | General-purpose 35B; MLX-converted for Apple Silicon Metal acceleration |
+| `qwen3-coder-next:latest` | 51 GB | — | Next-generation Qwen coder; largest model in the collection |
+| `qwen3:30b` | 18 GB | Q4 | General-purpose Qwen 3 30B; strong reasoning and instruction following |
+
+### Gemma (Google DeepMind)
+
+| Model | Size | Format | Notes |
+|-------|------|--------|-------|
+| `gemma4:31b-it-q8_0` | 33 GB | Q8 | Instruction-tuned 31B at 8-bit; highest quality Gemma variant |
+| `gemma4:31b-mlx` | 20 GB | MLX | Same 31B converted for Apple Silicon; trades some precision for Metal throughput |
+| `gemma4:26b-mxfp8` | 26 GB | MXFP8 | 26B with Microscaling FP8 quantization; good quality-to-size ratio |
+
+### Llama (Meta)
+
+| Model | Size | Format | Notes |
+|-------|------|--------|-------|
+| `llama3.3:70b` | 42 GB | Q4 | Largest model in the collection; Meta's most capable open-weight release |
+
+## Base Model Configurations
+
+| Model Name | Base Model | Context Window | Primary Purpose | Notes |
+|------------|------------|----------------|-----------------|-------|
+| 32k | qwen3.5:35b-mlx | 32768 | general | |
+| 8k | | 8192 | granite4.1-30b | |
+| 32k.agentic | qwen3-coder-next | 32768 | coding | |
+| 8k.battery | qwen3-coder-next | 8192 | coding | |
+
+---
+
+## Other 
 
 Miscellaneous content.
 
