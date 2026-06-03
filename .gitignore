@@ -3,6 +3,7 @@
 .venv/
 README.local.md
 models/ollama/README.local.md 
+DEBUG.md
 
 models/ollama/qwen3-coder/.claude
 
