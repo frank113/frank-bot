@@ -1,0 +1,7 @@
+from qwen3.5:35b-mlx
+
+PARAMETER num_ctx 32768
+PARAMETER num_predict 4096
+PARAMETER temperature 0
+PARAMETER num_thread 8
+PARAMETER num_gpu 999
