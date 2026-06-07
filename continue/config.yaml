@@ -1,0 +1,35 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+models:
+  - name: Llama 3.1 8B
+    provider: ollama
+    model: llama3.1:8b
+    roles:
+      - chat
+      - edit
+      - apply
+  - name: Gemma4 31b High
+    provider: ollama
+    model: gemma4:high
+    roles:
+      - chat
+    keepAlive: 30m
+    capabilities:
+      - tool_use
+      - image_input
+  - name: Qwen2.5-Coder 1.5B
+    provider: ollama
+    model: qwen2.5-coder:1.5b-base
+    roles:
+      - autocomplete
+  - name: Qwen2.5-Coder 3b-base
+    model: qwen2.5-coder:3b-base
+    provider: ollama
+    roles:
+      - autocomplete
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    roles:
+      - embed
