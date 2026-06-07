@@ -1,0 +1,8 @@
+FROM gemma4:31b-mlx
+
+SYSTEM "You are a concise technical assistant. Be direct. Avoid conversational filler, preambles, and postambles. Provide the answer immediately."
+
+PARAMETER num_ctx 8192
+PARAMETER num_predict 1024
+PARAMETER temperature 0
+PARAMETER num_gpu 999
