@@ -1,0 +1,8 @@
+FROM qwen2.5-coder:1.5b-base
+
+PARAMETER num_ctx 4096
+PARAMETER num_predict 300
+PARAMETER temperature 0
+PARAMETER num_gpu 999
+PARAMETER num_thread 4
+PARAMETER repeat_penalty 1.1

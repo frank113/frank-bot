@@ -1,0 +1,9 @@
+FROM qwen2.5-coder:1.5b-base
+
+PARAMETER num_ctx 2048
+PARAMETER num_predict 100
+PARAMETER temperature 0
+PARAMETER num_gpu 999
+PARAMETER num_thread 2
+PARAMETER repeat_penalty 1.1
+PARAMETER use_mlock true

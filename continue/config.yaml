@@ -18,18 +18,26 @@ models:
     capabilities:
       - tool_use
       - image_input
-  - name: Qwen2.5-Coder 1.5B
+  - name: Qwen2.5-Coder 1.5B (Always On)
     provider: ollama
     model: qwen2.5-coder:1.5b-base
     roles:
       - autocomplete
-  - name: Qwen2.5-Coder 3b-base
-    model: qwen2.5-coder:3b-base
+    keepAlive: -1
+  - name: Qwen2.5-Coder 7B (Power)
     provider: ollama
+    model: qwen2.5-coder:7b-base
     roles:
       - autocomplete
+    keepAlive: 20m
   - name: Nomic Embed
     provider: ollama
     model: nomic-embed-text:latest
     roles:
       - embed
+
+tabAutocompleteOptions:
+  debounceDelay: 300
+  maxPromptTokens: 1024
+  multilineCompletions: auto
+  logCompletions: true
