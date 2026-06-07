@@ -14,6 +14,10 @@ models:
     model: gemma4:high
     roles:
       - chat
+    keepAlive: 30m
+    capabilities:
+      - tool_use
+      - image_input
   - name: Qwen2.5-Coder 1.5B
     provider: ollama
     model: qwen2.5-coder:1.5b-base
