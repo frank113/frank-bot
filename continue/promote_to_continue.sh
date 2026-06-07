@@ -1,0 +1,1 @@
+cp config.yaml /Users/fkovacs/.continue/config.yaml
